@@ -47,7 +47,7 @@ resource "aws_ecs_service" "main" {
   launch_type     = "FARGATE"
 
   lifecycle {
-    ignore_changes = ["desired_count", "task_definition"]
+    ignore_changes = ["desired_count"]
   }
 
   network_configuration {
